@@ -10,7 +10,7 @@ before_script:
   #- export DISPLAY=:99.0
   #- sh -e /etc/init.d/xvfb start
   - npm install
-  - ./app.js > /dev/null &
+  - node app.js > /dev/null &
   - sleep 4 # give server time to start
 
 script:
