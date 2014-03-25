@@ -1,0 +1,2 @@
+# goddy
+### a Sails application
