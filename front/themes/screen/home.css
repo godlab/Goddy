@@ -1,0 +1,81 @@
+#home [data-role="main"] {
+  position: relative;
+  padding: 0;
+}
+#home [data-role="main"] #homeMap {
+  width: 100%;
+  height: 100%;
+}
+#home [data-role="main"] #searchPlaceHome {
+  margin-top: 1.5em;
+  width: 94%;
+  margin-left: 3%;
+  height: auto;
+  bottom: initial!important;
+}
+#home [data-role="main"] #searchPlaceHome input[data-type="search"] {
+  font-size: 1.5em;
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: none!important;
+  font-family: "goddyfont" !important;
+  line-height: 2em;
+}
+#home [data-role="main"] #searchPlaceHome input[data-type="search"] .gris {
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: none;
+  line-height: 2em;
+}
+#home [data-role="main"] #searchPlaceHome input[data-type="search"]::-webkit-input-placeholder {
+  /* WebKit browsers */
+
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: none;
+  line-height: 2em;
+}
+#home [data-role="main"] #searchPlaceHome input[data-type="search"]:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: none;
+  line-height: 2em;
+}
+#home [data-role="main"] #searchPlaceHome input[data-type="search"]::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: none;
+  line-height: 2em;
+}
+#home [data-role="main"] #searchPlaceHome input[data-type="search"]:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: none;
+  line-height: 2em;
+}
+#home [data-role="main"] #searchPlaceHome .ui-input-search::after {
+  left: .45em;
+  background-image: url("/themes/images/iconos_svg/lupaCirculito.svg") !important;
+  background-size: cover;
+  border-radius: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+}
+#home [data-role="main"] #gotoBookmarkHome {
+  width: 5em;
+  height: auto;
+  line-height: 2em;
+  bottom: initial!important;
+  border: none;
+  background-color: #ccc;
+  height: 2.25em;
+  position: absolute;
+  right: 1px;
+  top: -1px;
+}
+#home [data-role="main"] #gotoBookmarkHome::after {
+  background-image: url("/themes/images/iconos_svg/agenda.svg") !important;
+  background-size: cover;
+  border-radius: 0;
+}

@@ -1,0 +1,80 @@
+#home{
+	[data-role="main"]{
+		position: relative;
+		padding: 0;
+		#homeMap{
+			width: 100%;
+			height: 100%;
+		}
+		#searchPlaceHome{
+			margin-top: 1.5em;
+			width: 94%;
+			margin-left: 3%;
+			height: auto;
+			bottom: initial!important;
+			input[data-type="search"]{
+				font-size: 1.5em;
+				border-color: rgba(255,255,255,.4);
+				box-shadow: none!important;
+				font-family: "goddyfont" !important;
+				line-height: 2em;
+				.gris{
+					color: rgba(0,0,0,.4);
+					text-shadow: none;	
+					line-height: 2em;
+				}				
+				&::-webkit-input-placeholder { /* WebKit browsers */
+					.gris;
+				}
+				&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+					.gris;
+				}
+				&::-moz-placeholder { /* Mozilla Firefox 19+ */
+					.gris;
+				}
+				&:-ms-input-placeholder { /* Internet Explorer 10+ */
+					.gris;
+				}
+			}
+			.ui-input-search{
+				&::after{
+					left: .45em;
+					background-image: url("/themes/images/iconos_svg/lupaCirculito.svg") !important;
+					background-size: cover;
+					border-radius: 0;
+					width: 20px;
+					height: 20px;
+					margin-top: -10px;
+				}
+			}
+			// >div{
+			// 	background-image: url("/themes/images/iconos_svg/lupaCirculito.svg")!important;
+			// 	background-size: contain!important;
+			// 	background-position: left center!important;
+			// 	background-repeat: no-repeat!important;
+			// }
+		}
+		#gotoBookmarkHome{
+			width: 5em;
+			height: auto;
+			line-height: 2em;
+			bottom: initial!important;
+			border: none;
+			background-color: #ccc;
+			height: 2.25em;
+			position: absolute;
+			right: 1px;
+			top: -1px;
+			&::after{
+				background-image: url("/themes/images/iconos_svg/agenda.svg")!important;
+				background-size: cover;
+				border-radius: 0;
+			}
+			input{
+
+			}
+		}
+	}
+}
+
+

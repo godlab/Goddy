@@ -1,0 +1,26 @@
+.header {
+  border: none !important;
+  background-color: #ffffff;
+  z-index: 100;
+}
+.header .back-button {
+  padding: 0;
+  border: 0px;
+  background-size: contain;
+  width: 1.5em;
+  height: 2.5em;
+  margin: 1em 0 1em 1em;
+}
+.header .back-button :hover {
+  padding: 0;
+  border: 0px;
+  background-size: contain;
+  width: 1.5em;
+  height: 2.5em;
+  margin: 1em 0 1em 1em;
+}
+.header h1 {
+  font-size: 2em!important;
+  padding-bottom: .1em!important;
+  color: #0482c6 !important;
+}

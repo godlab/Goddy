@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>goddy</title>
+	<link rel="stylesheet" href="./themes/libs.css" />
+	<link rel="stylesheet" type="text/css" href="/themes/goddy_custom.css">
+
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA2OrKQ46g6_e7bFJrZbn1EyDommyOztjU&sensor=true&libraries=places"></script>
+
+	<script type="text/javascript" src="./libs/libs.js"></script>
+	<script type="text/javascript">
+		$.mobile.defaultPageTransition = 'slide';
+		$.mobile.defaultDialogTransition = 'pop';
+	</script>
+	
+	<script type="text/javascript" src="./scripts/App.js"></script>
+	<script type="text/javascript" src="./scripts/common.js"></script>
+</head>
+<body ng-app="App">
+	<!-- Intro -->
+		<div data-role="page" id="loading">
+			<!-- <div data-role="header">
+				<h1>Page header (optional): Example page</h1>
+			</div> -->
+			<div role="main" class="ui-content">
+				<div class="table-centred">
+					<div class="cell">
+						<a href="#login" data-transition="slide" id="logo"></a>
+					</div>
+				</div>
+			</div>
+			<!-- <div data-role="footer" data-position="fixed">
+				<h1>Page footer (optional)</h1>
+			</div> -->
+		</div>
+		<!-- /Intro -->
+	<!-- Account  -->
+		<div data-role="page" id="account" data-theme="b">
+			<!-- header -->
+			<div data-role="header" class="header">
+				<a  href="#home" data-icon="goddy-atras" class="back-button "></a>
+				<h1>Me</h1>	
+			</div>
+			<!-- /header -->
+			<div data-role="content" class="content">	
+				<div class="personal-data-container ui-body" >
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<div class="avatar"></div>
+						</div>
+						<div class="ui-block-b">
+							<ul>
+								<li class="name">Federico Casabona</li>
+								<li class="user-name">/Batman/</li>
+							</ul>
+							<span  class="ui-icon-goddy-lapizito"></span>	
+						</div>
+					</div><!-- /grid-a -->
+				</div>
+
+				<h2>NOTIFICATIONS</h2>
+
+				<form  class="form" id="notifications_form">
+						<div class="ui-field-contain">
+							<label for="friends_arrival_switch">Friends Arrival</label>
+							<select name="friends_arrival_switch" id="friends_arrival_switch" data-role="flipswitch">
+								<option value="0"></option>
+								<option value="1"></option>
+							</select>
+						</div>
+						<div class="ui-field-contain">
+							<label for="friends_arrival_switch">Lorenm Ipsum</label>
+							<select name="friends_arrival_switch" id="friends_arrival_switch" data-role="flipswitch">
+								<option value="0"></option>
+								<option value="1"></option>
+							</select>
+						</div>
+						<div class="ui-field-contain">
+							<label for="friends_arrival_switch">Check-in</label>
+							<select name="friends_arrival_switch" id="friends_arrival_switch" data-role="flipswitch">
+								<option value="0"></option>
+								<option value="1"></option>
+							</select>
+						</div>
+				</form>
+				<h2>ACCOUNT</h2>
+				<form  class="form" id="account_form">
+					<div class="ui-field-contain">
+						<input type="text" name="username" placeholder="Username">
+						<span  class="ui-icon-goddy-lapizito"></span>	
+						
+					</div>
+					<div class="ui-field-contain">
+						<input type="password" name="password" placeholder="Password">
+						<span  class="edit-icon"></span>					
+					</div>
+				</form>
+			</div>
+			<div data-role="footer" class="footer-navbar">
+			    <div data-role="navbar" class="footer-navbar">
+				    <ul>
+				        <li><a href="#create-event" data-icon="goddy-crearEvento" >&nbsp;</a></li>
+				        <li><a href="#home" data-icon="goddy-mapa">&nbsp;</a></li>
+				        <li><a href="#bookmarks" data-icon="goddy-eventos">&nbsp;</a></li>
+				        <li><a href="#account" data-icon="goddy-configuracion" transition="slide">&nbsp;</a></li>
+				    </ul>
+			    </div>
+			</div>
+		</div>
+		<!--  /Account -->
+
+	<!-- Bookmarks -->
+		<div data-role="page" id="bookmarks" data-theme="b">
+			<div data-role="header" class="header">
+				<a data-rel="back" data-icon="goddy-atras" class="back-button "></a>
+				<h1>Bookmarks</h1>
+			</div>
+			<div data-role="content" class="content">
+				<div class="ui-body">
+					<ul>
+						<li>Indian Restaurant</li>
+						<li>Milenica</li>
+						<li>Home</li>
+						<li>Central Park</li>
+						<li>Cesar Building</li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="footer" class="footer-controlgroup">
+				<div data-role="controlgroup" data-type="horizontal" data-theme="a">
+					<a href="#bookmarks" data-role="button" data-theme="a">Bookmarks</a>
+					<a href="" data-role="button" data-theme="a">Recents</a>
+					<a href="" data-role="button" data-theme="a">Contacts</a>
+				</div>
+			</div>
+		</div>
+		<!-- /Bookmarks -->
+
+	<!-- Contact info -->
+		<div data-role="page" id="contact-info">
+			<div data-role="header" class="header headerBKG">
+			<a  href="#home" data-icon="goddy-atras" class="back-button "></a>
+					<h1>Contact Info</h1>
+			</div>
+			<div data-role="content" class="contactBKG">
+				<div class="ui-body">
+					<div class="info-container contModif">
+						<div class="avatar2"></div>
+						<div class="nameInfo" >Alla Novick</div>
+						<div class="usernameInfo">Allita</div>
+					</div>
+				</div>
+				<div class="ui-body">
+					<h2 class="phone">212345673767</h2>
+				</div>
+				<div class="ui-body">
+					<h2 class="email">allanovick@gmail.com</h2>
+				</div>
+			</div>
+			<div data-role="footer" class="footer footerMod">
+					<button href=""class="ui-shadow ui-btn ui-corner-all inviteButton">Invite to get Goddy</button>
+				</div>
+			</div>
+		</div>
+		<!-- /Contact info -->
+
+	<!-- Contacs -->
+		<div data-role="page" id="contacs">
+			<div data-role="header" class="header">
+				<a  href="#home" data-icon="goddy-atras"></a>
+					<h1>Contacs</h1>
+				
+			</div>
+			<div data-role="content">
+				<div class="ui-body">
+					<ul>
+						<li>Indian Restaurant</li>
+						<li>Milenica</li>
+						<li>Home</li>
+						<li>Central Park</li>
+						<li>Cesar Building</li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="footer">
+				<div data-role="controlgroup" data-type="horizontal" data-theme="a">
+					<a href="#bookmarks" data-role="button" data-theme="a">Bookmarks</a>
+					<a href="#recents" data-role="button" data-theme="a">Recents</a>
+					<a href="#contacs" data-role="button" data-theme="a">Contacts</a>
+				</div>
+			</div>
+		</div>
+		<!-- /Contacs -->
+
+	<!-- Create Event -->
+		<div data-role="page" id="create-event" data-theme="b">
+			<div data-role="header" class="header">
+				<a  href="#home" data-icon="goddy-equis" class="equis-button"></a>
+					<h1>New Event</h1>
+			</div>
+			<div data-role="content" >
+				<form  class="form" id="event_form">
+					<div class="ui-field-contain">
+						<label class="field-label-createEvent">Subjet</label>
+						<input type="text" name="Members" placeholder="Members">
+					</div>
+					<div class="ui-field-contain">
+						<label class="field-label-createEvent">Members</label>
+						<input type="text" name="Members" placeholder="Members"></imput>
+						<span  class="goddy-edit-icon"></span>					
+					</div>
+					<div class="ui-field-contain">
+					<button href="#event"class="ui-shadow ui-btn ui-corner-all createButton">Create</button>
+					</div>
+				</form>
+			</div>
+		<div data-role="footer" class="footer-navbar">
+			    <div data-role="navbar" class="footer-navbar">
+				    <ul>
+				        <li><a href="#create-event" data-icon="goddy-crearEvento">&nbsp;</a></li>
+				        <li><a href="#home" data-icon="goddy-mapa">&nbsp;</a></li>
+				        <li><a href="#bookmarks" data-icon="goddy-eventos">&nbsp;</a></li>
+				        <li><a href="#account" data-icon="goddy-configuracion" transition="slide">&nbsp;</a></li>
+				    </ul>
+			    </div>
+		</div>
+		</div>
+		<!-- /Create Event -->
+
+	<!-- Event -->
+		<div data-role="page" id="event" data-theme="b">
+			<!-- header -->
+			<div data-role="header" class="header">
+				<a  href="#home" data-icon="goddy-atras" class="back-button "></a>
+				<h1>Event</h1>	
+			</div>
+			<!-- /header -->
+			<div data-role="content" class="content">	
+			
+				<!-- event-data -->
+					<div class="ui-body event-data-container" >
+						<div class="event-map"></div>
+						<div class="event-data">
+							<div class="envent-where ui-grid-a">
+								<span class="ui-block-a">
+									<div class="icon-pinpoint"></div>
+								</span>
+								<span class="ui-block-b">
+									<div class="event-place">Indian Restaurant, Centric</div>
+									<div class="event-address">Hill Cibuntry Chicken 1123 BroadWay, NY</div>
+								</span>
+							</div>
+							<div class="envent-when ui-grid-a">
+								<span class="ui-block-a">
+									<div class="icon-clock"></div>
+								</span>
+								<span class="ui-block-b">
+									<div class="event-time">Today att 08:30 PM</div>
+								</span>na 
+							</div>
+						</div>
+					</div>
+				<!-- /event-data -->
+
+				<!-- event-guests -->
+					<h2>GUEST</h2>
+					<div class="ui-body event-guests-container" >
+						<ul class="event-guests-list">
+							
+							<li class="event-host">
+								<div class="ui-grid-a">
+									<div class="ui-block-a"><div class="avatar"></div></div>
+									<div class="ui-block-b">
+										<ul>
+											<li class="name">You</li>
+											<li class="user-name">/Batman/</li>
+										</ul>
+										<div  class="guest-countdown"-01:34></div>
+										<div  class="guest-status"></div>
+									</div>
+								</div>
+							</li>
+
+							<li class="event-guest guest-confirmed">
+								<div class="ui-grid-a">
+									<div class="ui-block-a"><div class="avatar"></div></div>
+									<div class="ui-block-b">
+										<ul>
+											<li class="name">Diego</li>
+											<li class="user-name">Busy/</li>
+										</ul>
+										<div  class="guest-countdown"></div>
+										<div  class="guest-status"></div>
+									</div>
+								</div>
+							</li>
+
+							<li class="event-guest guest-edit">
+								<div class="ui-grid-a">
+									<div class="ui-block-a"><div class="avatar"></div></div>
+									<div class="ui-block-b">
+										<ul>
+											<li class="name">Dupper</li>
+											<li class="user-name">Para todos</li>
+										</ul>
+										<div  class="guest-countdown">-01:15</div>
+										<div  class="guest-status"></div>
+									</div>
+								</div>
+							</li>
+
+							<li class="event-guest guest-incomming">
+								<div class="ui-grid-a">
+									<div class="ui-block-a"><div class="avatar"></div></div>
+									<div class="ui-block-b">
+										<ul>
+											<li class="name">Lukas</li>
+											<li class="user-name">nickname</li>
+										</ul>
+										<div  class="guest-countdown">-01:30</div>
+										<div  class="guest-status"></div>
+									</div>
+								</div>
+							</li>
+
+							<li class="event-guest guest-pending">
+								<div class="ui-grid-a">
+									<div class="ui-block-a"><div class="avatar"></div></div>
+									<div class="ui-block-b">
+										<ul>
+											<li class="name">Markitos</li>
+											<li class="user-name">Caminando</li>
+										</ul>
+										<div  class="guest-countdown">-04:00</div>
+										<div  class="guest-status"></div>
+									</div>
+								</div>
+							</li>
+
+							<li class="event-add-guest">
+								<div class="ui-grid-a">
+									<div class="ui-block-a"></div>
+									<div class="ui-block-b">
+										<div  class="add-guest-action"></div>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				<!-- /event-guests -->
+				
+
+				<!-- event-comments -->
+					<h2>COMMENTS</h2>
+					<div class="ui-body event-comments-container" >
+					<ul class="event-comments-list">
+						<li class="event-commnet">
+							<div class="comment-body">
+								<p class="comment-text">
+									<strongclass = "comment-owner">Federico Casabona @</strong> Dear Friends, Let's meet to celebrate our 5th year togheter eating at this particular place haha see you later, Dont be late!
+								</p>
+							</div>
+						</li>
+						<li class="event-commnet">
+							<div class="comment-body">
+								<p class = "comment-text">
+									<strong class="comment-owner">Markitos @</strong> Some coment ,random words can be writen to fill the remaining space.
+								</p>
+							</div>
+						</li>	
+					</ul>
+					</div>
+				<!-- /event-comments -->
+				
+
+				<!-- event-host -->
+					<h2>HOST</h2>
+					<div class="ui-body event-host-container" >
+						<div class="ui-grid-a">
+							<div class="ui-block-a">
+								<div class="avatar"></div>
+							</div>
+							<div class="ui-block-b">
+								<ul>
+									<li class="name">Federico Casabona</li>
+									<li class="user-name">/Batman/</li>
+								</ul>
+								<div  data-icon="goddy-lapizito"class="edit-icon"></div>
+							</div>
+						</div><!-- /grid-a -->
+					</div>
+				<!-- /event-host -->
+				
+			</div>
+			<div data-role="footer" class="footer-navbar">
+			    <div data-role="navbar" class="footer-navbar">
+				    <ul>
+				        <li><a href="#create-event" data-icon="goddy-crearEvento" >&nbsp;</a></li>
+				        <li><a href="#home" data-icon="goddy-mapa">&nbsp;</a></li>
+				        <li><a href="#bookmarks" data-icon="goddy-eventos">&nbsp;</a></li>
+				        <li><a href="#account" data-icon="goddy-configuracion" transition="slide">&nbsp;</a></li>
+				    </ul>
+			    </div>
+			</div>
+		</div>
+		<!-- /Event -->
+
+	<!-- GPS -->
+		<div data-role="page" id="gps" data-theme="b">
+			<!-- <div data-role="header">
+				<h1>Page header (optional): Example page</h1>
+			</div> -->
+			<div data-role="main" class="ui-content">
+				<div id="gpsMap"></div>
+				<div id="search_place">
+					<div class="ui-grid-a">
+					      <div class="ui-block-a">
+					        <input id="searchPlace" type="search" name="password" placeholder="Search or enter an address">
+					      </div>
+					      <div class="ui-block-b">
+					           <div id="gotoBookmark">
+					           		&nbsp;
+								    <a data-rel="back" class="ui-btn-right ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all"></a>
+								</div>
+					      </div>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" class="footer-navbar">
+			    <div data-role="navbar">
+			    <ul>
+			        <li><a href="#create-event" data-icon="goddy-crearEvento">&nbsp;</a></li>
+			        <li><a href="#home" data-icon="goddy-mapa">&nbsp;</a></li>
+			        <li><a href="#bookmarks" data-icon="goddy-eventos">&nbsp;</a></li>
+			        <li><a href="#account" data-icon="goddy-configuracion" transition="slide">&nbsp;</a></li>
+			    </ul>
+			    </div>
+			</div>
+		</div>
+		<!-- /GPS -->
+
+	<!-- Invitation -->
+		<div data-role="page" id="invitation">
+			<div data-role="header">
+			<a href="#home" data-icon"goddy-atras"></a>
+				<h1>Invitation</h1>
+			</div> 
+			<div role="main" class="ui-content">
+		
+			</div>
+			<div data-role="footer" class="footer-navbar">
+			    <div data-role="navbar">
+			    <ul>
+			        <li><a href="#create-event" data-icon="goddy-crearEvento">&nbsp;</a></li>
+			        <li><a href="#home" data-icon="goddy-mapa">&nbsp;</a></li>
+			        <li><a href="#bookmarks" data-icon="goddy-eventos">&nbsp;</a></li>
+			        <li><a href="#account" data-icon="goddy-configuracion" transition="slide">&nbsp;</a></li>
+			    </ul>
+			    </div>
+			</div>
+		</div>
+		<!-- /Invitation -->
+
+	<!-- Location and Time -->
+		<div data-role="page" id="location-and-time">
+			<div data-role="header" class="header headerBKG">
+			<a  href="#home" data-icon="goddy-atras" class="back-button "></a>
+					<h1>Location and Time</h1>
+			</div>
+			<div role="main" class="ui-content locationAndTimeBKG">
+			<div class="personal-data-container ui-body" >
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<div class="avatar"></div>
+						</div>
+						<div class="ui-block-b">
+							<ul>
+								<li class="name">Federico Casabona</li>
+								<li class="user-name">/Batman/</li>
+							</ul>
+							<span  class="ui-icon-goddy-lapizito"></span>	
+						</div>
+					</div>
+			</div>
+			</div>
+			
+			<div data-role="footer" class="footer footerMod">
+					<button href=""class="ui-shadow ui-btn ui-corner-all inviteButton">save</button>
+			</div>		
+		</div>
+		</div>
+		
+		<!-- /Location and Time  -->
+
+	<!-- Login -->
+		<div data-role="page" id="login" data-theme="a" ng-controller="LoginController">
+			<div data-role="content">
+				<div class="table-centred">
+					<div class="cell">
+						<div class="logo"></div>
+						<div data-role="controlgroup">
+							<input type="text" name="email" placeholder="Email" ng-model="session.data.email">
+							<input type="text" name="password" placeholder="Password" ng-model="session.data.password">
+							<button ng-click="session.login()" class="ui-shadow ui-btn ui-corner-all" type="submit" id="login_user">Log in</button>
+							<div id="forgot_password">
+								<a href="/forgot_password.html">Forgot password?</a>
+							</div>
+						</div>		
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<a href="#register" data-role="none">Create account <span>></span></a>
+			</div><!-- /footer -->
+			<div class="themes_container">
+				<div data-role="popup" id="popupLogin">
+					<p>This is a completely basic popup, no options set.</p>
+				</div>
+			</div>
+		</div>
+		<!-- /Login -->
+
+	<!-- Map -->
+		<div data-role="page" id="home" data-theme="b">
+			<!-- <div data-role="header">
+				<h1>Page header (optional): Example page</h1>
+			</div> -->
+			<div data-role="main" class="ui-content">
+				<div id="homeMap"></div>
+		        <div id="search_place">
+		        	<div id="searchPlaceHome">
+	        			<input type="search" placeholder="Search or enter an address">
+	        			<div id="gotoBookmarkHome" class="ui-input-btn ui-btn ui-icon-delete ui-btn-icon-notext">
+							Enhanced - Icon only
+							<input type="button" data-enhanced="true" value="Enhanced - Icon only">
+						</div>
+		        	</div>
+				</div>
+				<div id="markerActions">
+					<a href="">Create event</a>
+					<br>
+					<a href="#addBookmark" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop">Add to bookmark</a>
+					<div data-role="popup" id="addBookmark" data-theme="a" class="ui-corner-all">
+					    <form>
+					        <div style="padding:10px 20px;">
+					            <label for="un" class="ui-hidden-accessible">Name:</label>
+					            <input type="text" name="name" id="un" value="" placeholder="username" data-theme="a">
+					            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Save</button>
+					        </div>
+					    </form>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" class="footer-navbar">
+			    <div data-role="navbar">
+			    <ul>
+			        <li><a href="#create-event" data-icon="goddy-crearEvento">&nbsp;</a></li>
+			        <li><a href="#home" data-icon="goddy-mapa">&nbsp;</a></li>
+			        <li><a href="#bookmarks" data-icon="goddy-eventos">&nbsp;</a></li>
+			        <li><a href="#account" data-icon="goddy-configuracion" transition="slide">&nbsp;</a></li>
+			    </ul>
+			    </div>
+			</div>
+		</div>
+		<!-- /Map -->
+
+	<!-- Recents -->
+		<div data-role="page" id="recents">
+			<div data-role="header" class="header">
+				<a  href="#home" data-icon="carat-l">Cancel</a>
+					<h1>Me</h1>
+				<a href="index.html" data-icon="check">Save</a>
+			</div>
+			<div data-role="content">
+				<div class="ui-body">
+					<ul>
+						<li>Indian Restaurant</li>
+						<li>Milenica</li>
+						<li>Home</li>
+						<li>Central Park</li>
+						<li>Cesar Building</li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="footer">
+				<div data-role="controlgroup" data-type="horizontal" data-theme="a">
+					<a href="#bookmarks" data-role="button" data-theme="a">Bookmarks</a>
+					<a href="#recents" data-role="button" data-theme="a">Recents</a>
+					<a href="#contacs" data-role="button" data-theme="a">Contacts</a>
+				</div>
+			</div>
+		</div>
+		<!-- /Recents -->
+
+
+	<!-- Register -->
+	<div data-role="page" id="register" data-theme="b" ng-controller="RegisterController">
+		<div data-role="header">
+			<!-- <a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear"></a> -->
+			<div id="custom-border-radius">
+			    <a data-rel="back" class="ui-btn-left ui-btn ui-btn-icon-notext"></a>
+			</div>
+			<h1>Create Account</h1>
+		</div>
+		<div data-role="content" id="register">
+			<div class="table-centred">
+				<div class="cell">
+					<div data-role="controlgroup">
+						<input type="text" name="username" placeholder="Pick a username" ng-model="session.data.username">
+						<input type="text" name="email" placeholder="Enter your email" ng-model="session.data.email">
+						<input type="text" name="password" placeholder="Enter a password" ng-model="session.data.password">
+						<button ng-click="session.register()" id="register_user" class="ui-shadow ui-btn ui-corner-all">Register</button>
+					</div>		
+				</div>
+			</div>
+			<div class="themes_container">
+				<div data-role="popup" id="popupRegister">
+					<p>This is a completely basic popup, no options set.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Register -->
+
+	
+</body>
+</html>

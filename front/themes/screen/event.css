@@ -1,0 +1,37 @@
+#event .content .event-host-container {
+  background-color: white;
+  margin-top: 2em;
+}
+#event .content .event-host-container .ui-grid-a .ui-block-a {
+  width: 34%;
+}
+#event .content .event-host-container .ui-grid-a .ui-block-a .avatar {
+  background-image: url('images/avatar.jpg');
+  background-size: cover;
+  border-radius: 10em;
+  height: 10em;
+  width: 10em;
+  margin: .1em;
+}
+#event .content .event-host-container .ui-grid-a .ui-block-b {
+  width: 66%;
+  position: relative;
+  margin-top: 1.5em;
+}
+#event .content .event-host-container .ui-grid-a .ui-block-b ul {
+  position: absolute;
+  float: left;
+  height: 4em;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+#event .content .event-host-container .ui-grid-a .ui-block-b ul li {
+  font-size: 2em;
+}
+#event .content .event-host-container .ui-grid-a .ui-block-b ul .name {
+  color: #006ba2;
+}
+#event .content .event-host-container .ui-grid-a .ui-block-b ul .user-name {
+  color: black;
+}

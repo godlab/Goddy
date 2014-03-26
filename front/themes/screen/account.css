@@ -1,0 +1,94 @@
+#account .content {
+  background: #f7f7f7;
+}
+#account .content h2 {
+  margin: 2em auto .7em auto!important;
+  text-shadow: none!important;
+  color: #c4c4c7!important;
+}
+#account .content .form .ui-field-contain {
+  background: white;
+  margin: 0 0 0.5% 0 !important;
+  padding: .5em;
+}
+#account .content .form .ui-field-contain label {
+  color: #c4c4c7 !important;
+  width: 85%;
+}
+#account .content .form .ui-field-contain .ui-flipswitch {
+  float: right;
+  width: 3em;
+  border-color: #f7f7f7;
+}
+#account .content .form .ui-field-contain .ui-flipswitch :hover {
+  background: white !important;
+}
+#account .content .form .ui-field-contain .ui-flipswitch span {
+  border-color: #62c462;
+}
+#account .content .form .ui-field-contain .ui-flipswitch.ui-flipswitch-active {
+  padding-left: 1em;
+  width: 1.875em;
+}
+#account .content .form .ui-field-contain .ui-flipswitch.ui-flipswitch-active span {
+  border: none;
+}
+#account .content .form .ui-field-contain .ui-input-text input {
+  background: transparent none;
+  -webkit-appearance: none;
+  -webkit-border-radius: none;
+  border-radius: none;
+}
+#account .content .personal-data-container {
+  background-color: white;
+  margin-top: 2em;
+}
+#account .content .personal-data-container .ui-grid-a .ui-block-a {
+  width: 34%;
+}
+#account .content .personal-data-container .ui-grid-a .ui-block-a .avatar {
+  background-image: url('images/avatar.jpg');
+  background-size: cover;
+  border-radius: 4em;
+  height: 7em;
+  width: 7em;
+  margin: .1em;
+}
+#account .content .personal-data-container .ui-grid-a .ui-block-b {
+  width: 66%;
+  position: relative;
+  margin-top: 1.5em;
+}
+#account .content .personal-data-container .ui-grid-a .ui-block-b ul {
+  position: absolute;
+  float: left;
+  height: 4em;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+#account .content .personal-data-container .ui-grid-a .ui-block-b ul li {
+  font-size: 2em;
+}
+#account .content .personal-data-container .ui-grid-a .ui-block-b ul .name {
+  color: #006ba2;
+  font-size: 1.2em;
+}
+#account .content .personal-data-container .ui-grid-a .ui-block-b ul .user-name {
+  color: black;
+  font-size: 1.2em;
+}
+#account .content .personal-data-container .ui-grid-a .ui-block-b .edit-icon {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+}
+.ui-flipswitch.ui-corner-all {
+  -webkit-border-radius: 1em !important;
+  border-radius: 1em !important;
+}
+.form {
+  border-radius: 0px !important;
+  margin: 1em auto 2em auto;
+}

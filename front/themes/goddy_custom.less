@@ -1,0 +1,444 @@
+/*
+
+azul background color: #0079b8;
+azul hover: #0482c6;
+azul create acount color: #006ba2;
+gris barckground :#f7f7f7;
+gris tipografias color: #c4c4c7;
+verde iconos color: #62c462;
+rojo :#ff3333;
+*/
+
+@fuenteColor: #ffffff;
+@azul: #0071bc;
+/*make sure the viewport is 100% height*/
+html, body {
+    height : 100%;
+}
+
+*:focus {
+    outline: 0;
+}
+
+
+/*make the page element 100% height*/
+#map-page {
+    height : 100%;
+}
+
+/*specify a height for the header so we can line-up the elements, the default is 40px*/
+#map-page .ui-header {
+    height : 40px; 
+}
+
+/*set the content to be full-width and height except it doesn't overlap the header or footer*/
+#map-page .ui-content {
+    position : absolute;
+    top      : 40px;
+    right    : 0;
+    bottom   : 30px;
+    left     : 0;
+}
+
+/*absolutely position the footer to the bottom of the page*/
+#map-page .ui-footer {
+    position : absolute;
+    bottom   : 0;
+    left     : 0;
+    width    : 100%;
+    height   : 30px;
+}​
+
+.table-centred{
+	display: table;
+	width: 100%;
+	height: 100%;
+	.cell{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+
+.ui-shadow {
+-webkit-box-shadow: 0 0 0 !important;
+box-shadow: 0 0 0 !important;
+}
+
+
+/*
+ TYPOGRAFIA 
+*/
+
+@font-face {
+    font-family: "goddyfont";
+    src: url("../fonts/HelveticaLight.otf") format("opentype");   
+        /* Make sure you defined the correct path, which is related to
+            the location of your file `my_css.css` */ 
+    }
+
+    body {
+        font-family: "goddyfont";
+    }
+
+
+@import "screen/account.less";
+@import "screen/home.less";
+@import "screen/intro.less";
+@import "screen/bookmarks.less";
+@import "screen/event.less";
+
+@import "icons/icons-style.less";
+@import "common/header.less";
+@import "common/footer.less";
+
+
+// .ui-field-contain{
+	// background: transparent!important;
+// }
+
+.ui-focus,
+.ui-btn:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+input{
+	background-color:transparent;
+	border: 0px solid;
+	height:20px;
+	width:160px;
+	color:#CCC;
+	background: white!important;
+
+}
+.ui-input-text{
+	border: none;
+border-color: transparent;
+}
+
+
+.ui-imput-text,.ui-focus{
+	.edit-icon{
+		.ui-icon-goddy-lapizito;
+	}
+}
+
+#legend,
+.ui-input-text input,
+.ui-input-search input {
+	background-color: @azul;
+	.blancoPosta{
+		color:    #fff;
+		font-weight: lighter;
+	}
+	&::-webkit-input-placeholder { /* WebKit browsers */
+		.blancoPosta;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		.blancoPosta;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		.blancoPosta;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+		.blancoPosta;
+	}
+}
+
+.input_con_bordes{ //Agrego bordes a los input
+	.ui-field-contain{
+		>div{
+			border: 1px solid #000;
+			border-radius: 5px;
+			width: 100%;
+		}
+	}
+}
+
+// Pantalla
+[data-role="page"]{
+	.redondeado{
+		border-radius: 0.4em;
+		padding: .8%;
+	}
+	// Y #register 
+	&#register{
+		[data-role="header"]{
+			color: rgb(12,100,169);
+			border: none;
+		}
+		[data-role="content"]{
+			background: rgb(242,245,252);
+			.ui-input-text{
+				background: transparent;
+				border-color: rgb(230,231,235);
+				box-shadow: none;
+				.redondeado;
+				input{
+					background: transparent;
+					.placeholder{
+						color: rgba(0,0,0,.4);	
+					}
+					&::-webkit-input-placeholder { /* WebKit browsers */
+						.placeholder;
+					}
+					&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+						.placeholder;
+					}
+					&::-moz-placeholder { /* Mozilla Firefox 19+ */
+						.placeholder;
+					}
+					&:-ms-input-placeholder { /* Internet Explorer 10+ */
+						.placeholder;
+					}
+				}
+			}
+			button{
+				.redondeado;
+				background-color: rgb(13,105,178);
+				color: #fff;
+				text-shadow: none;
+				padding: 1.7%;
+				margin-top: 3%;
+			}
+		}
+		a[data-rel="back"]{
+			background: url(images/iconos_svg/atras.svg) no-repeat center center !important;
+			background-size: cover;
+			border: none;
+			&:after, .ui-btn-icon-notext:after{
+				background-color: rgba(0,0,0,0);
+			}
+		}	
+	}
+	// Y #login
+	&#login{
+		font-family: "goddyfont" !important;
+		.blanqueado{
+			color: rgba(255,255,255,.4);
+			text-shadow: none;	
+		}
+		.gris{
+			color: rgba(0,0,0,.4);
+			text-shadow: none;	
+		}
+		.ui-input-text{
+			border-color: rgba(255,255,255,.4);
+			box-shadow: none!important;
+			.gris;
+			input{
+				background: transparent;
+				&::-webkit-input-placeholder { /* WebKit browsers */
+					.gris;
+				}
+				&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+					.gris;
+				}
+				&::-moz-placeholder { /* Mozilla Firefox 19+ */
+					.gris;
+				}
+				&:-ms-input-placeholder { /* Internet Explorer 10+ */
+					.gris;
+				}
+			}
+		}
+		button{
+			.redondeado;
+			padding: 1.7%;
+		}
+		#forgot_password{
+			margin-top: 1em;
+			text-align: center;
+			a{
+				.blanqueado;
+				border-bottom: 1px solid rgba(255,255,255,.4);
+				text-decoration: none;
+				padding-bottom: 3px;
+				font-weight: normal;
+				text-shadow: none;
+			}
+		}
+		.logo{
+			background: url(images/iconos_svg/logo.svg) no-repeat center center;
+			height: 8em;
+			width: 8em;
+			margin: auto;
+			background-size: contain !important;
+			margin-bottom: 16%;
+		}
+		[data-role="footer"]{
+			background: transparent;
+			border: none;
+			box-shadow: none;
+			// El link que apunta a #register
+			a[href="#register"]{
+				background-color: rgba(0,0,0,.2);
+				border: none;
+				width: 92%;
+				padding: 4%;
+				margin: 0;
+				color: rgba(255,255,255,.7);
+				text-shadow: none;
+				border-radius: 0;
+				font-size: 2em;
+				font-family: "goddyfont" !important;
+				span{
+					margin-left: 1em;
+				}
+			}
+		}
+	}
+	&#create-event{
+		.input_con_bordes(); //Invoco los estilos bordes
+	}
+}
+
+//create Event //////////////////////////////
+
+//equis-button //
+.field-label-createEvent{
+	float: none !important;
+	font-size: 25px !important;
+	color: #0078ba !important;
+	letter-spacing: 2px!important;
+	padding-left: 20px;
+	.ui-input-text{
+		border-style: solid !important;
+		border-color: #0078ba !important;
+	}
+}
+
+.themes_container{
+	display: none;
+}
+//create button
+.createButton{
+	background-color: #0078ba !important;
+	color: #ffffff !important;
+	border: none !important;
+	font-family: "goddyfont" !important;
+	font-size: 20px !important;
+	letter-spacing: 2px !important;
+	padding-top: 15px !important;
+	text-shadow: none !important;
+}
+
+//conact-info//////////////
+.contactBKG{
+	background-color: #f7f7f7 !important;
+	color: #0078ba !important;
+	margin: auto !important;
+	text-align: center !important;
+	text-shadow: none !important;
+}
+
+.contModif{
+	padding: 0  !important;
+}
+.headerBKG{
+	background: #ffffff !important;
+}
+
+.phone{
+	color: #717171 !important;
+	margin: 1em auto 0.1em auto;
+}
+
+.email{
+	color: #717171 !important;
+	margin: 0.1em auto 1em auto;
+}
+
+.avatar2{
+	background-image:url('images/avatar.jpg');
+	background-size:cover;
+	border-radius:5em;
+	height:9em;
+	width:9em;
+	margin: 1.1em auto 1.1em auto;
+}
+
+
+.nameInfo{
+	font-size: 22px !important;
+}
+
+.usernameInfo{
+	font-size: 18px !important;
+}
+.footerMod{
+	background-color: #f7f7f7 !important;
+	border: none !important;
+	text-align: center !important;
+}
+
+.inviteMod{
+	background-color: #0079b8 !important;
+	color: #ffffff !important;
+	border-radius: 4em !important;
+}
+.inviteButton{
+	background-color: #0078ba !important;
+	color: #ffffff !important;
+	border: none !important;
+	font-family: "goddyfont" !important;
+	font-size: 2em !important;
+	letter-spacing: 2px !important;
+	padding-top: 12px !important;
+	padding-bottom: 10px !important;
+	text-shadow: none !important;
+	font-weight: normal !important;
+	margin: 0.2em auto 0.2em auto !important;
+	width: 98% !important;
+	border-radius: 0.2em !important;
+}
+/////////////////////////////////////////////
+
+//location and time//
+
+.locationAndTimeBKG{
+	background-color: #f7f7f7 !important;
+	color: #0078ba !important;
+	margin: auto !important;
+	text-shadow: none !important;
+}
+
+//////////////////////////////////////////
+.inline-form {
+}
+
+.inline-form .wrapper {
+  float: left;
+  width: 100%;
+}
+
+.inline-form .wrapper .content {
+  margin: 0 75px 0 92px;  /* 0 RC 0 LC */
+}
+
+.inline-form .left {
+  float: left;
+  width: 92px; /* LC */
+  margin-left: -100%;
+}
+
+.inline-form .text {
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  display: block;
+  font-size: 16px;
+}
+
+.inline-form .right {
+  float: left;
+  width: 75px; /* RC */
+  margin-left: -75px; /* -RC */
+}
+
+.inline-form .footer{
+  clear: left;
+}
+
+

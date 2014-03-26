@@ -1,0 +1,12 @@
+#bookmarks {
+  background-color: #f7f7f7!important;
+}
+#bookmarks .content div ul {
+  padding: 0 !important;
+}
+#bookmarks .content div ul li {
+  border-bottom: 1px solid #c4c4c7!important;
+  list-style: none !important;
+  padding: 0.6em .5em .2em 0!important;
+  font-size: 1.2em;
+}

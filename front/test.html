@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Test</title>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA2OrKQ46g6_e7bFJrZbn1EyDommyOztjU&sensor=true&libraries=places"></script>
+
+	<script type="text/javascript" src="./libs/libs.js"></script>
+	<script type="text/javascript">
+		$.mobile.defaultPageTransition = 'slide';
+		$.mobile.defaultDialogTransition = 'pop';
+	</script>
+	
+	<script type="text/javascript" src="./scripts/App.js"></script>
+
+	<script type="text/javascript" src="./libs/qunit.js"></script>
+	<link rel="stylesheet" type="text/css" href="./libs/qunit.css">
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+</body>
+<script type="text/javascript">
+	var user = {
+	  		username: 'Pepe',
+	  		password: '123456',
+	  		email: 'pepe@a.a'
+	  	};
+  	var injector = angular.injector(['ng','App']);
+	// var init = {
+	//     setup: function() {
+	//         this.$scope = injector.get('$rootScope').$new();
+	//     }
+	// };
+	// module('tests', init);
+	asyncTest( "Not User", function(){
+		var session = injector.get('session');
+		session.data = user;
+		expect(1);
+		session.register(function(){
+			ok( session.isLogged == true, "Passed!" );
+			start();
+		});
+	});
+</script>
+</html>

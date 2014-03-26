@@ -1,0 +1,132 @@
+.icono-header {
+  background-color: white !important;
+  width: 3.5em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+}
+.icono-navbar {
+  width: 3.5em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+  background-color: #0079b8 !important;
+  background: no-repeat top left !important;
+  margin: 1em auto !important;
+  background-size: contain !important;
+}
+.ui-icon-goddy-atras {
+  background-color: white !important;
+  width: 3.5em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+  background-image: url("/themes/images/iconos_png/atras.png") !important;
+}
+.ui-icon-goddy-mapa {
+  width: 3.5em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+  background-color: #0079b8 !important;
+  background: no-repeat top left !important;
+  margin: 1em auto !important;
+  background-size: contain !important;
+  background-image: url("/themes/images/iconos_png/mapa.png") !important;
+}
+.ui-icon-goddy-configuracion {
+  width: 3.5em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+  background-color: #0079b8 !important;
+  background: no-repeat top left !important;
+  margin: 1em auto !important;
+  background-size: contain !important;
+  background-image: url("/themes/images/iconos_png/configuracion.png") !important;
+}
+.ui-icon-goddy-crearEvento {
+  width: 3.5em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+  background-color: #0079b8 !important;
+  background: no-repeat top left !important;
+  margin: 1em auto !important;
+  background-size: contain !important;
+  background-image: url("/themes/images/iconos_png/crearEvento.png") !important;
+}
+.ui-icon-goddy-eventos {
+  width: 3.5em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+  background-color: #0079b8 !important;
+  background: no-repeat top left !important;
+  margin: 1em auto !important;
+  background-size: contain !important;
+  background-image: url("/themes/images/iconos_png/eventos.png") !important;
+}
+.ui-icon-goddy-agenda {
+  background-image: url("/themes/images/iconos_png/agenda.png") !important;
+}
+.ui-icon-goddy-agujasRelojCirculito {
+  background-image: url("/themes/images/iconos_png/agujasRelojCirculito.png") !important;
+}
+.ui-icon-goddy-atrasBlanco {
+  background-image: url("/themes/images/iconos_png/atrasBlanco.png") !important;
+}
+.ui-icon-goddy-cruzCirculoRojo {
+  background-image: url("/themes/images/iconos_png/cruzCirculoRojo.png") !important;
+}
+.ui-icon-goddy-cruzFondoRojo {
+  background-image: url("/themes/images/iconos_png/cruzFondoRojo.png") !important;
+}
+.ui-icon-goddy-cruzSinCirculito {
+  background-color: white !important;
+  width: 3.5em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+  background: url("/themes/images/iconos_png/cruzSinCirculito.png") no-repeat top left !important;
+}
+.ui-icon-goddy-equis {
+  background-color: white !important;
+  width: 3.5em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+  background: url("/themes/images/iconos_png/equis.png") no-repeat !important;
+  background-position: auto auto !important;
+  margin: 1em 1em !important;
+  width: 31px !important;
+  height: 32px !important;
+}
+.ui-icon-goddy-lapizito {
+  background-image: url("/themes/images/iconos_png/lapizito.png") !important;
+  background-size: cover;
+  height: .8em;
+  width: .8em;
+  display: table;
+  right: .75em;
+  position: absolute;
+  top: .8em;
+}
+.ui-icon-goddy-logo {
+  background-image: url("/themes/images/iconos_png/logo.png") !important;
+}
+.ui-icon-goddy-logoGoddy {
+  background-image: url("/themes/images/iconos_png/logoGoddy.png") !important;
+}
+.ui-icon-goddy-lupaCirculito {
+  background-image: url("/themes/images/iconos_png/lupaCirculito.png") !important;
+}
+.ui-icon-goddy-pinpointCirculito {
+  background-image: url("/themes/images/iconos_png/pinpointCirculito.png") !important;
+}
+.ui-icon-goddy-tildeCirculito {
+  background-image: url("/themes/images/iconos_png/tildeCirculito.png") !important;
+}
+.ui-icon-goddy-tildeSinCirculito {
+  background-image: url("/themes/images/iconos_png/tildeSinCirculito.png") !important;
+}

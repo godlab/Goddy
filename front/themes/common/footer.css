@@ -1,0 +1,19 @@
+.footer-navbar div ul li {
+  width: 25%;
+  background: #0079b8 !important;
+}
+.footer-navbar div ul li a {
+  background-repeat: none;
+  margin: auto auto;
+}
+.footer-navbar div ul li a :hover {
+  background: #0482c6 !important;
+}
+.footer-controlgroup {
+  width: 90%;
+}
+.footer-controlgroup div {
+  width: 100%;
+  margin: auto;
+  display: table;
+}
